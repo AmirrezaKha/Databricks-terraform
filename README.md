@@ -47,8 +47,8 @@ Jobs are created dynamically for each domain using Terraform with different time
 ```bash
     | Job Type     | Schedule (UTC)                    |
     |------------|-------------------------------|
-    | ETL     | `retail_etl.py`               |
-    | Anomaly ML        | `vix_etl.py`                  |
+    | ETL        | `retail_etl.py`               |
+    | Anomaly ML | `vix_etl.py`                  |
 ```
 
 ### 📬 CI/CD Pipeline
