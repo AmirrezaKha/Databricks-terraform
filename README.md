@@ -45,7 +45,7 @@ Each domain also has a corresponding anomaly detection script (`anomaly_*.py`) t
 Jobs are created dynamically for each domain using Terraform with different time slots:
 
 ```bash
-    | Job Type   | Schedule (UTC)              | 
+    | Job Type   | Schedule (UTC)                | 
     |------------|-------------------------------|
     | ETL        | `retail_etl.py`               |
     | Anomaly ML | `vix_etl.py`                  |
