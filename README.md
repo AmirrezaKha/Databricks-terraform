@@ -14,7 +14,7 @@ This project ingests open-source CSV datasets from the internet, runs ETL jobs i
 | Gold       | `gold_etl.py`                 | `main.etl.gold_prices`               |
 | Nasdaq     | `nasdaq_etl.py`               | `main.etl.nasdaq_history`            |
 
-Each domain also has a corresponding anomaly detection script (`*_anomaly.py`) that writes results to `main.ml.<domain>_anomalies`.
+Each domain also has a corresponding anomaly detection script (`anomaly_*.py`) that writes results to `main.ml.<domain>_anomalies`.
 
 ---
 
@@ -43,10 +43,13 @@ Each domain also has a corresponding anomaly detection script (`*_anomaly.py`) t
 ### 🧪 Job Scheduling Logic
 
 Jobs are created dynamically for each domain using Terraform with different time slots:
+
+```bash
     | Job Type     | Schedule (UTC)                    |
     |------------|-------------------------------|
     | ETL     | `retail_etl.py`               |
     | Anomaly ML        | `vix_etl.py`                  |
+```
 
 ### 📬 CI/CD Pipeline
 
@@ -93,7 +96,7 @@ databricks workspace import_dir scripts /Workspace/scripts
         │ Unity Catalog /    │
         │ Delta Tables       │
         └────────────────────┘
-
+```
 
 
 
