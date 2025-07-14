@@ -8,7 +8,6 @@ This project ingests open-source CSV datasets from the internet, runs ETL jobs i
 
 | Domain     | ETL Script                    | Output Delta Table                  |
 |------------|-------------------------------|--------------------------------------|
-| Retail     | `retail_etl.py`               | `main.etl.retail_monthly_sales`      |
 | VIX        | `vix_etl.py`                  | `main.etl.vix_weekly`                |
 | Gas        | `gas_etl.py`                  | `main.etl.gas_prices`                |
 | Gold       | `gold_etl.py`                 | `main.etl.gold_prices`               |
@@ -47,7 +46,7 @@ Jobs are created dynamically for each domain using Terraform with different time
 ```bash
     | Job Type   | Schedule (UTC)                | 
     |------------|-------------------------------|
-    | ETL        | `retail_etl.py`               |
+    | Gss        | `gas_etl.py`               |
     | Anomaly ML | `vix_etl.py`                  |
 ```
 
